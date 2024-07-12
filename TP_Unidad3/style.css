@@ -1,0 +1,113 @@
+/* General */
+body {
+    font-family: Calibri, sans-serif;
+    margin: 20px;
+    background-image: url('/TP_Unidad3/fondo.png');
+    background-size: auto; /* para que la imagen se repita */
+    background-repeat: repeat; /* configurado para repetir */
+    background-attachment: fixed;
+    font-weight: bold; /* Todas las fuentes en bold */
+}
+
+
+h1 {
+    color: rgb(60, 6, 104);
+
+    }
+
+.titulo_botonera {
+    color: #CC2EFA;
+}
+
+/* Hover Horizontal */
+ul.hoover_horizontal {
+    list-style-type: none; /* Eliminar adornos de lista */
+    padding: 0;
+    margin: 0;
+    font-weight: bold; /* Todas las fuentes en bold */
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    box-sizing: border-box; /* Para incluir padding y border en el ancho total */
+}
+
+ul.hoover_horizontal li {
+    flex: 1 1 auto;
+    margin: 5px;
+    background-color: #F3F781;
+    border: 2px solid #FFBF00;
+    border-radius: 2px;
+    text-align: center;
+    box-sizing: border-box; /* Para incluir padding y border en el ancho total */
+    display: flex; /* Añade esta línea para usar flexbox */
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    width: 200px; /* Ajusta el ancho deseado */
+    height: 60px; /* Ajusta la altura deseada */
+}
+
+ul.hoover_horizontal li a {
+    text-decoration: none;
+    color: #FF4000;
+    display: block;
+    padding: 10px 0;
+    width: 100%; /* Asegura que el enlace ocupe todo el ancho del contenedor flex */
+    text-align: center; /* Centrar el texto dentro del enlace */
+}
+
+
+/* Hover efectos para botones horizontales */
+ul.hoover_horizontal li:hover {
+    background-color: #F5DA81;
+    font-weight: bold;
+}
+
+ul.hoover_horizontal li:hover a {
+    color: #FF0000;
+}
+
+/* Hover botonera vertical */
+ul.hoover_vertical {
+    list-style-type: none; /* Eliminar adornos de lista */
+    padding: 0;
+    margin: 0;
+    font-weight: bold; /* Todas las fuentes en bold */
+    width: 430px; /* Ajusta el ancho para que no cambie al redimensionar */
+    max-width: 430px;;
+    position:relative;
+    left: 5px; /* Alinear con el margen izquierdo */
+}
+
+ul.hoover_vertical li {
+    margin: 10px 0;
+    margin-left: 0;
+    background-color: #F5A9E1;
+    border: 1.5px dotted #BF00FF;
+    border-radius: 1px;
+    font-weight: bold;
+    display: flex; /* Añade esta línea para usar flexbox */
+    justify-content: right; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    position: relative; /* Asegura que los elementos hijos se posicionen correctamente */
+}
+
+ul.hoover_vertical li a {
+    text-decoration: none;
+    color: #6A0888;
+    display: block; /* Cambiar de flex a block */
+    padding: 10px 20px;
+    text-align: right;
+    position: relative; /* Para que el pseudo-elemento no tape el texto */
+    z-index: 2; /* Elevar el enlace por encima del fondo */
+}
+
+/* Hover efectos para botones verticales */
+ul.hoover_vertical li:hover {
+    background-color: #FE2E9A;
+    z-index: 1; /* Mantener el fondo por debajo del texto */
+}
+
+ul.hoover_vertical li:hover a {
+    color: #6A0888; /* Cambiar el color del texto para contraste */
+    z-index: 3; /* Mantener el texto por encima del fondo */
+}
