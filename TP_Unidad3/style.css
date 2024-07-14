@@ -72,8 +72,8 @@ ul.hoover_vertical {
     padding: 0;
     margin: 0;
     font-weight: bold; /* Todas las fuentes en bold */
-    width: 430px; /* Ajusta el ancho para que no cambie al redimensionar */
-    max-width: 430px;;
+    width: 350px; /* Ajusta el ancho para que no cambie al redimensionar */
+    max-width: 350px;;
     position:relative;
     left: 5px; /* Alinear con el margen izquierdo */
 }
