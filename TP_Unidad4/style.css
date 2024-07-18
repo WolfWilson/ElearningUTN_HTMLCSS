@@ -1,0 +1,110 @@
+body {
+    background: rgb(0,0,0);
+    background: linear-gradient(173deg, rgba(0,0,0,1) 0%, rgba(69,84,91,1) 76%, rgba(56,58,58,1) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    text-align: center;
+    overflow: hidden;
+}
+
+header {
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.spotify {
+    margin-bottom: 20px;
+}
+
+.container {
+    margin-top: 100px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    max-width: 90%;
+    box-sizing: border-box;
+}
+
+h1, h2 {
+    margin: 10px 0;
+    font-family: 'Bebas Neue', sans-serif;
+    color: #e0d77e;
+}
+
+.fondo_album {
+    display: flex;
+    justify-content: center;
+    background-color: black;
+}
+
+.album-cover {
+    max-width: 100%;
+    height: auto;
+    margin: 20px 0;
+    display: block;
+}
+
+.lyrics-container {
+    height: 800px; /* Modifica este valor para cambiar la altura */
+    width: 400px; /* Modifica este valor para cambiar el ancho */
+    overflow-y: auto;
+    text-align: center;
+    margin-top: 10px;
+    margin: 20px auto;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.lyrics {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #e0d77e;
+}
+
+.line {
+    font-weight: bold;
+    color: #e0d77e;
+    transition: opacity 0.15s ease-in-out;
+    white-space: nowrap; /* Evitar que las líneas cambien de tamaño */
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007BFF;
+    color: white;
+    cursor: pointer;
+    margin: 5px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+@media (min-width: 1024px) {
+    .container {
+        max-width: 60%;
+    }
+
+    .album-cover {
+        max-width: 50%;
+    }
+
+    .lyrics-container {
+        height: 1200px; /* Tamaño fijo */
+        width: 700px; /* Ancho fijo */
+    }
+}
