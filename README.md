@@ -1,5 +1,5 @@
 
-# ElearningUTN_HTMLCSS
+# Elearning UTN HTML5+CSS3 Responsive 🌐
 
 Diseño Web Responsive con HTML5 y CSS3 🚀
 Este repositorio contiene mis proyectos y ejercicios prácticos del curso "Diseño Web Responsive – HTML5 y CSS3". A lo largo de este curso, estoy aprendiendo a crear sitios web modernos, atractivos y adaptables a diferentes dispositivos.
