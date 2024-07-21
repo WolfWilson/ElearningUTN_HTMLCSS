@@ -50,10 +50,10 @@ document.getElementById('translate-button').addEventListener('click', () => {
         "No hay manera de ver su engaño"
     ];
 
-    const isTranslation = translateButton.textContent === 'Traducir al Español';
+    const isTranslation = translateButton.textContent === 'Traducir';
 
     const textToUse = isTranslation ? translations : originalText;
-    const newButtonText = isTranslation ? 'Ver Original' : 'Traducir al Español';
+    const newButtonText = isTranslation ? 'Ver Original' : 'Traducir';
 
     const fadeAndChangeText = (index) => {
         if (index >= lines.length) {
