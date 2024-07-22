@@ -17,7 +17,7 @@ body {
     position: fixed;
     top: 0;
     z-index: 1000;
-    height: 50px; /* Ajustar la altura del menú de navegación */
+    height: 50px;
 }
 
 .navbar ul {
@@ -26,13 +26,12 @@ body {
     padding: 0;
     display: flex;
     justify-content: center;
-    height: 100%; /* Alinea los elementos de la lista verticalmente */
+    height: 100%;
+    align-items: center;
 }
 
 .navbar ul li {
-    display: flex; /* Alinea los enlaces verticalmente */
-    align-items: center; /* Alinea los enlaces verticalmente */
-    padding: 0 20px; /* Ajusta el espaciado horizontal */
+    padding: 0 20px;
 }
 
 .navbar ul li a {
@@ -41,13 +40,33 @@ body {
     text-decoration: none;
     display: block;
     font-family: 'Bebas Neue', sans-serif;
-    font-size: 16px;
-    line-height: 50px; /* Asegura que el texto esté alineado verticalmente */
+    font-size: 18px;
+    line-height: 50px;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+.navbar ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    display: block;
+    margin-top: 5px;
+    right: 0;
+    background: #e0d77e;
+    transition: width 0.3s ease;
+    -webkit-transition: width 0.3s ease;
+}
+
+.navbar ul li a:hover::after {
+    width: 100%;
+    left: 0;
+    background-color: #e0d77e;
 }
 
 .navbar ul li a:hover {
-    background-color: #575757;
-    color: #e0d77e;
+    color: #e7e768;
 }
 
 .content {
@@ -55,7 +74,7 @@ body {
     width: 100%;
     max-width: 960px;
     margin: 0 auto;
-    padding-top: 100px; /* Añade más espacio para la barra de navegación */
+    padding-top: 10px; /* Añade más espacio para la barra de navegación */
 }
 
 .content_analisis {
@@ -63,9 +82,7 @@ body {
     width: 100%;
     max-width: 960px;
     margin: 0 auto;
-    padding-top: 100px; /* Añade más espacio para la barra de navegación */
-
-
+    padding-top: 10px; /* Añade más espacio para la barra de navegación */
 }
 
 .header_container {
@@ -199,15 +216,6 @@ button:hover {
     background-color: #0056b3;
 }
 
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 1rem;
-    margin-top: auto;
-    width: 100%;
-}
-
 @media (min-width: 1024px) {
     .album-lyrics-container {
         flex-direction: row;
@@ -223,4 +231,64 @@ footer {
         max-width: 60%;
         max-height: 700px;
     }
+
+    footer {
+        background-color: #333;
+        color: #fff;
+        padding: 0.5rem 1rem; /* Reduce la altura del footer */
+        margin-top: auto;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .container-footer {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        max-width: 960px;
+        margin: 0 auto;
+        align-items: center;
+    }
+    
+    .text-footer {
+        text-align: center;
+        flex: 1;
+    }
+    
+    .link {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .socials {
+        display: flex;
+        justify-content: center;
+        margin-top: 0.5rem;
+    }
+    
+    .socials a {
+        display: inline-block;
+        min-height: 40px;
+        width: 40px;
+        background-color: aqua;
+        margin: 0 10px;
+        text-align: center;
+        line-height: 40px;
+        border-radius: 50%;
+        color: white;
+        font-size: 20px;
+    }
+    
+    .link a :hover {
+        color: #0056b3;
+
+    }
+    .socials a:hover {
+        background-color: rgb(255, 255, 255);
+    }
+    
+
 }
