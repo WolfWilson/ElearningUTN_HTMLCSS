@@ -10,28 +10,79 @@ body {
     min-height: 100vh;
 }
 
+.navbar {
+    background-color: #333;
+    overflow: hidden;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    height: 50px; /* Ajustar la altura del menú de navegación */
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    height: 100%; /* Alinea los elementos de la lista verticalmente */
+}
+
+.navbar ul li {
+    display: flex; /* Alinea los enlaces verticalmente */
+    align-items: center; /* Alinea los enlaces verticalmente */
+    padding: 0 20px; /* Ajusta el espaciado horizontal */
+}
+
+.navbar ul li a {
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 16px;
+    line-height: 50px; /* Asegura que el texto esté alineado verticalmente */
+}
+
+.navbar ul li a:hover {
+    background-color: #575757;
+    color: #e0d77e;
+}
+
 .content {
     flex: 1;
     width: 100%;
-    max-width: 960px; /* Limita el ancho máximo del contenido */
-    margin: 0 auto; /* Centra el contenido horizontalmente */
+    max-width: 960px;
+    margin: 0 auto;
+    padding-top: 100px; /* Añade más espacio para la barra de navegación */
 }
-.header_container{
+
+.content_analisis {
     flex: 1;
     width: 100%;
-    max-width: 960px; /* Limita el ancho máximo del contenido */
-    margin: 0 auto; /* Centra el contenido horizontalmente */
+    max-width: 960px;
+    margin: 0 auto;
+    padding-top: 100px; /* Añade más espacio para la barra de navegación */
+
+
+}
+
+.header_container {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 40px 0; /* Ajustar espacio alrededor del encabezado */
 }
 
 header {
-    text-align: center;
-    padding: 20px;
-    background: #000; /* Fondo negro */
+    background: #000;
     animation: expandHeader 1s ease-in-out;
-    position:relative;
-    z-index: 1000;
+    position: relative;
+    z-index: 900; /* Debajo de la navbar */
 }
-/*clase para animación de carga del titulo*/
+
 @keyframes expandHeader {
     0% {
         max-width: 0;
@@ -52,16 +103,16 @@ header {
 }
 
 .spotify {
-    margin-bottom: 20px;
+    margin-bottom: 20px; /* Ajustar margen inferior del widget de Spotify */
     width: 100%;
 }
 
-h1, h2 {
+h1, h2, h4 {
     margin: 10px 0;
     font-family: 'Bebas Neue', sans-serif;
     color: #e0d77e;
     font-size: xx-large;
-    animation: slideIn 1s ease-in-out; /* Añade animación a los títulos */
+    animation: slideIn 1s ease-in-out;
 }
 
 @keyframes slideIn {
@@ -103,10 +154,10 @@ h1, h2 {
     text-align: left;
     width: 100%;
     overflow-y: auto;
-    max-height: 700px; /* Cambia este valor al alto deseado */
+    max-height: 700px;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start; /* Asegura que el contenido se alinee en la parte superior */
+    justify-content: flex-start;
 }
 
 .lyrics-container h2 {
@@ -116,8 +167,8 @@ h1, h2 {
 }
 
 .lyrics-container button {
-    align-self: flex-start; /* Alinea el botón al inicio del contenedor */
-    margin-bottom: 10px; /* Espacio entre el botón y las letras */
+    align-self: flex-start;
+    margin-bottom: 10px;
 }
 
 .lyrics {
@@ -170,6 +221,6 @@ footer {
     .lyrics-container {
         flex-grow: 1;
         max-width: 60%;
-        max-height: 700px; /* Cambia este valor al alto deseado */
+        max-height: 700px;
     }
 }
