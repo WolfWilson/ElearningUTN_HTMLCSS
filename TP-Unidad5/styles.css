@@ -9,16 +9,30 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    margin-left: 0;
 }
 
 header {
     background-color: black;
-    padding: 1rem;
     text-align: center;
     position: relative;
     overflow: hidden;
     width: auto;
-    height: 120px;
+    height: 130px;
+    margin-top: 0px;
+    padding: 1rem 2rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: auto;
+}
+
+.header-content {
+    position: relative;
+    z-index: 2; /* Para asegurarte de que el contenido esté por encima del borde rasgado */
+    padding: 1rem;
 }
 
 header h1 {
@@ -29,21 +43,29 @@ header h1 {
     position: relative;
 }
 
+header ul li a:hover {
+    color: #dba76b;
+
+}
+
 #img-header {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 0;
+    z-index: 1;
     overflow: hidden;
 }
 
 #img-header img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Asegura que la imagen cubra completamente el contenedor sin distorsionarse */
+    object-fit:cover; /* Asegura que la imagen cubra completamente el contenedor sin distorsionarse */
+    ;
 }
+
+
 
 nav ul {
     list-style: none;
@@ -128,7 +150,7 @@ main {
 
 .posters-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Limita a 3 columnas */
+    grid-template-columns: repeat(4, 1fr); /* Limita a 3 columnas */
     gap: 1rem;
     max-width: 100%;
     justify-content: center; /* Centra las columnas */
@@ -162,11 +184,12 @@ main {
 footer {
     background-color: #272B2C;
     color: #fff;
-    padding: 0.5rem 1rem;
+    padding: 1rem 2rem;
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    flex-direction: column;
     margin-top: auto;
 }
 
@@ -176,23 +199,31 @@ footer {
     width: 100%;
     max-width: 960px;
     margin: 0 auto;
-    align-items: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
 }
 
 .text-footer {
     text-align: center;
-    flex: 1;
+    flex: 1 1 100%;
+    margin-bottom: 1rem;
 }
 
-.link {
+.footer-columns {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.link, .formulario {
+    flex: 1 1 45%;
+    margin: 0.5rem;
 }
 
 .socials {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     margin-top: 0.5rem;
 }
 
@@ -200,21 +231,80 @@ footer {
     display: inline-block;
     min-height: 40px;
     width: 40px;
-    background-color: rgb(226, 228, 148);
+    background-color: rgb(0, 0, 0);
     margin: 0 10px;
     text-align: center;
     line-height: 40px;
     border-radius: 50%;
-    color: white;
+    color: #c4935a;
     font-size: 20px;
 }
 
 .link a:hover {
-    color: #0056b3;
+    color: #ffffff;
 }
 
 .socials a:hover {
-    background-color: rgb(255, 255, 255);
+    background-color: #c4935a;
+}
+
+.formulario h2 {
+    margin-top: 0;
+    color: #c4935a;
+}
+
+.link h2 {
+    color: #c4935a;
+    margin-top: 0;
+    margin-left: 30px;
+}
+
+.formulario form {
+    display: flex;
+    flex-direction: column;
+    font-weight: bolder;
+}
+
+.formulario label {
+    margin-top: 0.5rem;
+    font-weight: bold;
+}
+
+.formulario input, .formulario textarea {
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.formulario button {
+    margin-top: 1rem;
+    padding: 0.5rem;
+    background-color: #dba76b;
+    color: #000000;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.formulario button:hover {
+    background-color: #c4935a;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .footer-columns {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .link, .formulario {
+        flex: 1 1 100%;
+        margin: 0.5rem 0;
+    }
 }
 
 .yesteryear-regular {
@@ -236,15 +326,6 @@ footer {
 
     .poster-box {
         height: 250px;
-    }
-}
-
-@media (max-width: 480px) {
-    .posters-grid {
-        grid-template-columns: repeat(1, 1fr); /* Limita a 1 columna */
-    }
-
-    .poster-box {
-        height: 200px;
+        
     }
 }

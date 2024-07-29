@@ -110,4 +110,46 @@ ul.hoover_vertical li:hover {
 ul.hoover_vertical li:hover a {
     color: #6A0888; /* Cambiar el color del texto para contraste */
     z-index: 3; /* Mantener el texto por encima del fondo */
+
+}
+
+.contact {
+    padding: 2rem;
+    text-align: center;
+    animation: fadeIn 2s ease-in-out;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form label {
+    margin: 0.5rem 0;
+    color: #fff;
+}
+
+form input, form textarea {
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+    width: 100%;
+    max-width: 400px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    margin-top: 1rem;
+    padding: 0.5rem 2rem;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #333;
 }

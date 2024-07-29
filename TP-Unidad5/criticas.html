@@ -8,13 +8,16 @@
 </head>
 <body>
     <header>
-        <h1>Videoteca Maldita</h1>
-        <nav>
+        <div id="img-header">
+            <img src="/TP-Unidad5/src/banner2.webp" alt="Title">
+        </div>  
+        <h1>La  Dimensión del Terror</h1>
+        <nav class="navbar">
             <ul>
                 <li><a href="/TP-Unidad5/index.html">Películas</a></li>
                 <li><a href="/TP-Unidad5/libros.html">Libros</a></li>
                 <li><a href="/TP-Unidad5/criticas.html">Críticas</a></li>
-                <li><a href="/TP-Unidad5/index.html">Pídeme una peli!</a></li>
+                <li><a href="#contact-form">Pídeme una peli!</a></li>
             </ul>
         </nav>
     </header>
@@ -37,18 +40,33 @@
     </main>
 
     <footer>
-      <div class="container-footer">
-          <div class="text-footer">&copy; 2024 TP4 By Will™. Todos los derechos reservados.</div>
-          <div class="link">
-              <h3>Mis Redes</h3>
-              <div class="socials">
-                  <a href="https://x.com/WolfWilson86"><i class="fab fa-twitter"></i></a>
-                  <a href="https://www.linkedin.com/in/wilson-wolf-330a70257/"><i class="fab fa-linkedin-in"></i></a>
-                  <a href="https://github.com/WolfWilson/"><i class="fab fa-github"></i></a>
-              </div>
-          </div>
-      </div>
-  </footer>
+        <div class="container-footer">
+            <div class="text-footer">&copy; 2024 TP5 By Will™. Todos los derechos reservados.</div>
+            <div class="footer-columns">
+                <div class="link">
+                    <h2>Mis Redes</h2>
+                    <div class="socials">
+                        <a href="https://x.com/WolfWilson86"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.linkedin.com/in/wilson-wolf-330a70257/"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://github.com/WolfWilson/"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div id="contact-form" class="formulario">
+                    <h2>Contacto</h2>
+                    <p>Haz tu pedido aquí!:</p>
+                    <form>
+                        <label for="name">Nombre:</label>
+                        <input type="text" id="name" name="name" required>
+                        <label for="email">Correo Electrónico:</label>
+                        <input type="email" id="email" name="email" required>
+                        <label for="message">Mensaje:</label>
+                        <textarea id="message" name="message" rows="3" required></textarea>
+                        <button type="submit">Enviar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </footer>
     <script src="script.js"></script>
 
     <script src="script.js"></script>
