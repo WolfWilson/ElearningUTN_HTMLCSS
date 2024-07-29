@@ -95,6 +95,26 @@ main {
     align-items: center; /* Centra el contenido horizontalmente */
 }
 
+#movie-posters {
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    position: relative;
+
+    width: auto;
+margin-left: auto;
+margin-left: 0px;
+    margin-top: 0px;
+    padding: 1rem 2rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: auto;
+    
+
+}
+
 .movie-info {
     display: flex;
     flex-wrap: wrap;
@@ -159,7 +179,7 @@ main {
 .poster-box {
     width: 200px; /* Ancho fijo para el contenedor del póster */
     height: 300px; /* Alto fijo para el contenedor del póster */
-    background-color: #ffffff00;
+    background-color: rgb(255, 255, 255);
     padding: 10px;
     border-radius: 5px;
     display: flex;
@@ -178,7 +198,7 @@ main {
 
 .poster-box img:hover {
     transform: scale(1.05);
-    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.8);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.329);
 }
 
 footer {
